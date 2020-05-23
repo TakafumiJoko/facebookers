@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Cw3ClZS6KwsxaAffwWOay5hYDcaBQNBUvEP9GDwz7hKUUsW8G1HFQjLqDLFidVGOn/R8IKYKZf7GLU2ZJmNXjw==" />
+
+    <link rel="stylesheet" media="all" href="/assets/application-945628f9f95377705c9108ec9a9704e6f6ffa0767c02e34400d75b5be64fc1b7.css" data-turbolinks-track="reload" />
+    <script src="/assets/application-11e027fe501efa6924bd87aa8f6ef7436fd1539022b412029c4a223dec9664f8.js" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <nav class='nav navbar-nav navbar-left' >
+      <span>Bookers</span>
+    </nav>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a class="glyphicon glyphicon-home home" href="/"> Home</a></li>
+          <li><a class="glyphicon glyphicon-link about" href="/home/about"> About</a></li>
+          <li><a class="glyphicon glyphicon-edit sign_up" href="/users/sign_up"> sign up</a></li>
+          <li><a class="glyphicon glyphicon-log-in sign_in" href="/users/sign_in"> login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  	<div class='body'>
+      <div class='container'>
+
+        <p id="notice"></p>
+
+
+      	<h2>Log in</h2>
+
+<form class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="yAqsUA2y92FOO7sEi81bUBoPLdYtQoveMOr7ONBerIILfz4N0rUaAt1MiEiEZbVW/FV/zwx+NkW3fZWlQlsD8A==" />
+  <div class="field">
+    <label for="user_name">Name</label><br />
+    <input autofocus="autofocus" class="name" type="text" name="user[name]" id="user_name" />
+  </div>
+  <div class="field">
+    <label for="user_password">Password</label><br />
+    <input autocomplete="off" class="password" type="password" name="user[password]" id="user_password" />
+  </div>
+
+    <div class="field">
+      <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+      <label for="user_remember_me">Remember me</label>
+    </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Log in" class="btn btn-primary" data-disable-with="Log in" />
+  </div>
+</form>
+
+  <a class="sign_up" href="/users/sign_up">Sign up</a><br />
+
+  <a href="/users/password/new">Forgot your password?</a><br />
+
+
+
+
+
+      </div>
+    </div>
+
+    <footer>
+  <div class='container'>
+  	<div class='row'>
+    	<div class='col-xs-3 col-xs-offset-9'>
+    		<p>CopyRight Infratop.inc</p>
+    	</div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
