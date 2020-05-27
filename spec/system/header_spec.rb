@@ -8,7 +8,7 @@ describe 'ヘッダーのテスト' do
     context 'ヘッダーの表示を確認' do
       subject { page }
       it 'タイトルが表示される' do
-        is_expected.to have_content 'Bookers'
+        is_expected.to have_content 'Facebookers'
       end
       it 'Homeリンクが表示される' do
         home_link = find_all('a')[0].native.inner_text
@@ -72,7 +72,7 @@ describe 'ヘッダーのテスト' do
     context 'ヘッダーの表示を確認' do
       subject { page }
       it 'タイトルが表示される' do
-        is_expected.to have_content 'Bookers'
+        is_expected.to have_content 'Facebookers'
       end
       it 'Homeリンクが表示される' do
         home_link = find_all('a')[0].native.inner_text

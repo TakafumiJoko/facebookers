@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  def top
-  end
-
+  before_action :authenticate_user!
   def index
   end
 
