@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_23_090153) do
+ActiveRecord::Schema.define(version: 2020_05_26_060643) do
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_05_23_090153) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name"
-    t.string "opinion"
+    t.string "introduction"
     t.string "profile_image_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
