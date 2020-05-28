@@ -5,7 +5,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>facebookers</title>
+    <title>Facebookers</title>
   </head> 
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
@@ -23,7 +23,7 @@
                 <%= link_to "Users", users_path %>
               </li>
               <li class="">
-                <%= link_to "Books", "#" %>
+                <%= link_to "Books", books_path %>
               </li>
               <li class="">
                 <%= link_to "logout", destroy_user_session_path, method: :delete %>
@@ -33,7 +33,7 @@
                 <%= link_to "Home", "/" %>
               </li>
               <li class="">
-                <%= link_to "About", "home/about" %>
+                <%= link_to "About", "/home/about" %>
               </li>
               <li class="">
                 <%= link_to "sign up", new_user_registration_path %>
@@ -49,14 +49,17 @@
     
     <div class='body'>
       <div class='container'>
-        <div class="notifications">
-          <% flash.each do |key, value| %>
-            <%= value %>
-          <% end %>
-        </div>
-        
+        <div class='row'>
+          
+          <div class="notifications">
+            <% flash.each do |key, value| %>
+              <%= value %>
+            <% end %>
+          </div>
+
         <%= yield %>
-        
+
+        </div>
       </div>
     </div>
     
