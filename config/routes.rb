@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  # authenticated :user do
+  # authenticated :users do
   #   root 'users#show', as: :user_root
   # end
   root 'home#top'

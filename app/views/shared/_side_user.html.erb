@@ -1,0 +1,18 @@
+<h2>User info</h2>
+  <table class='table'>
+    <tr>
+      <%= attachment_image_tag user, :profile_image, size:'80x80', class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg" %>
+    <tr>
+  	  <th>name</th>
+  	  <th><%= user.name %></th>
+    </tr>
+    <tr>
+  	  <th>introduction</th>
+  	  <th><%= user.introduction %></th>
+    </tr>
+  </table>
+<%# if user == current_user %>
+  <%= link_to "edit", edit_user_path(user.id), class:"col-xs-12 btn btn-success glyphicon glyphicon-wrench" %>
+<%# else %>
+  <%#= link_to "edit", user_path(user.id), class:"col-xs-12 btn btn-success glyphicon glyphicon-wrench" %>
+<%# end %>

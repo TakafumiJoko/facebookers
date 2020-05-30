@@ -1,24 +1,7 @@
-# README
+# 本アプリについて
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Facebookersは読んだ本の感想を共有し合うWebサービスです。
 
-Things you may want to cover:
+## 機能
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ユーザー情報（プロフィールなど）の登録、本の感想の発信、他のユーザーの情報を閲覧できます。

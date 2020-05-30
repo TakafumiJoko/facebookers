@@ -1,18 +1,21 @@
-  <%= render "/users/sidebar", book: @book %>
+<div class="col-xs-3">
+<%= render 'shared/side_user', user: @user %>
+<%= render 'shared/side_book' %>
+</div>
   <div class='col-xs-9'>
 		<h2>Book detail</h2>
-		<table class='table'>
-		  <tr>
-        <td><a href="/users/18335">
-          <!--<img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" alt="No image icon" /><br>-->
-          aa
-</a>        </td>
-        <td><a href="/books/29353">a</a></td>
-        <td>a</td>
-
-          <td><a class="btn-sm btn-success edit_book_29353" href="/books/29353/edit">Edit</a></td>
-          <td><a data-confirm="本当に消しますか？" class="btn-sm btn-danger destroy_book_29353" rel="nofollow" data-method="delete" href="/books/29353">Destroy</a></td>
+    <table class='table'>
+      <tr>
+        <td><%= link_to attachment_image_tag(@user, :profile_image, size: '80x80', fallback: "no_image.jpg"), user_path(@user.id) %></td>
+        <td><%= link_to @book.title, book_path(@book.id) %></td>
+        <td><%= @book.body %></td>
+        <% if @book.user_id == current_user.id %>
+          <td><%= link_to "Edit", edit_book_path(@book.id), class: "btn btn-success" %></td>
+          <td><%= link_to "Destroy", book_path(@book.id), method: :delete, class:"btn btn-warning" %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td><%= link_to @user.name, user_path(@user.id) %></td>
       </tr>
     </table>
-
   </div>

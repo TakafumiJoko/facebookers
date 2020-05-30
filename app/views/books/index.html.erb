@@ -1,27 +1,35 @@
-<%= render '/users/sidebar', book: @book %>
-  <div class='col-xs-9'>
-    <h2>Books</h2>
+<div class="col-xs-3">
+<%= render 'shared/side_user', user: @user %>
+<%= render 'shared/side_book' %>
 
-    <table class='table table-hover table-inverse'>
-  <thead>
-    <tr> 
+</div>
+<div class='col-xs-9'>
+	<h2>Books</h2>
+  <table class='table'>
+    <tr>
       <th></th>
       <th>Title</th>
       <th>Opinion</th>
-      <th colspan="3"></th>
     </tr>
-  </thead>
+    
+    <% @users.each do |user| %>
 
-  <tbody>
-      <tr>
-        <td>
-          <a href="/users/18300">
-            <!--<img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" alt="No image icon" />-->
-          </a>        
-        </td>
-        <td><a class="book_29277" href="/books/29277">aaa</a></td>
-        <td>aaaaa</td>
-      </tr>
-  </tbody>
-</table>
-  </div>
+      <% @books.each do |book| %>
+      
+        <% if user.id == book.user_id %>
+        <tr>
+          <td><%= link_to attachment_image_tag(user, :profile_image, size: '80x80', fallback: "no_image.jpg"), user_path(user.id) %></td>
+        
+          <td><%= link_to book.title, book_path(book.id) %></td>
+          <td><%= book.body %></td>
+        
+        </tr>
+        <% end %>
+        
+      <% end %>
+      
+    <% end %>
+
+    
+  </table>
+</div>

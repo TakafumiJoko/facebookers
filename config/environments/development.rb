@@ -61,4 +61,9 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   config.hosts << "e241b537197147a29e58aa5ba10d84c7.vfs.cloud9.ap-northeast-1.amazonaws.com"
+  
+  Refile.secret_key = '80bb3343ee88475dfcf072f71dc4028e51d5682e6222658e89c881821ccac8370b5ec9483e99574ec0e42f65f87c9cfb4fd9d94223a1766d68c5cd0cfb90a0b9'
+  
+   host = 'samplehost'
+  Rails.application.routes.default_url_options[:host] = host
 end

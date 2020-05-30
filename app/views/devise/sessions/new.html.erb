@@ -11,8 +11,11 @@
     <br />
     <%= f.password_field :password, id: "user_password" %>
   </div>
-  <div class="field">
-    <label>Remember me</label>
+  <div class="form-group">
+    <%= f.label :remember_created_at, class: "checkbox inline" do %>
+      <%= f.check_box :remember_created_at %>
+      <span>Remember me</span>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit "Log in", class: "btn btn-primary" %>
